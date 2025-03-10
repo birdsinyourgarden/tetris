@@ -95,11 +95,11 @@ function fillLines() {
 
 function updateScore(points) {
     score += points;
-    scoreContainer.textContent = score;
+    scoreElement.textContent = score;
 
     if (score > highScore) {
         highScore = score;
-        highScoreContainer.textContent = highScore;
+        highScoreElement.textContent = highScore;
         localStorage.setItem("highScore", highScore);
     }
 }

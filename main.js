@@ -59,7 +59,8 @@ function movePiece(dx, dy) {
 
 function rotatePiece() {
     const rotated = currentPiece.shape[0].map((_, i) => 
-        currentPiece.shape.map(row => row[i].reverse()));
+        currentPiece.shape.map(row => row[i]))
+    .reverse();
 
     if (!collides(0, 0, rotated)) {
         gsap.to(currentPiece, { duration: 0.1, rotation: 360 });
